@@ -12,5 +12,11 @@ pipeline{
                 input('Do you want to proceed?')
             }
         }
+        
+        stage('Three'){
+            steps{
+                echo 'Moved to final stage!'
+            }
+        }
     }
 }
