@@ -1,7 +1,7 @@
 pipelien{
   agent any
   stages{
-    stage('Git){
+    stage('Git'){
           steps{
             git 'https://github.com/pk4a17/gradle-proj.git'
           }
