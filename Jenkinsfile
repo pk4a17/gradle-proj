@@ -13,9 +13,9 @@ pipeline{
             }
         }
         
-        stage('Three'){
+        stage('Mail'){
             steps{
-                echo 'Moved to final stage!'
+                mail bcc: '', body: 'Jenkins sample-pipeline build is successfull!', cc: '', from: '', replyTo: '', subject: 'Build successfull', to: 'nikkikumari87615@gmail.com'
             }
         }
     }
