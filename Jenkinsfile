@@ -15,7 +15,7 @@ pipeline{
         
         stage('Mail'){
             steps{
-                mail bcc: '', body: 'Jenkins sample-pipeline build is successfull!', cc: '', from: '', replyTo: '', subject: 'Build successfull', to: 'nikkikumar87615@gmail.com'
+                mail bcc: '', body: 'Jenkins sample-pipeline build is successfull!', cc: '', from: '', replyTo: '', subject: 'Build successfull', to: 'purushottam.k@fnp.com'
             }
         }
     }
