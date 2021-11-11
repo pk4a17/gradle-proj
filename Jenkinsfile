@@ -1,13 +1,13 @@
 pipeline{
     agent any
     stages{
-        stage('One'){
+        stage('Message'){
             steps{
                 echo 'Hello, This is Jenkins pipeline.'
             }
         }
         
-        stage('Two'){
+        stage('Permission'){
             steps{
                 input('Do you want to proceed?')
             }
