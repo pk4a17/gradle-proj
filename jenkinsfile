@@ -10,8 +10,6 @@ pipeline{
         stage('Build'){
             steps{
                 build 'sample-pipeline'
-                sh 'make'
-                archiveArtifacts artifacts: '/gradle-proj/gradle/wrapper/*.jar', fingerprint: true
             }
         }
         
