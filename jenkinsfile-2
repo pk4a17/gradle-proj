@@ -1,13 +1,14 @@
 pipeline{
-    agent {
-        docker { image 'doc-jen'}
-    }
+    agent none
     stages{
         stage('Java version'){
-            steps{
-                sh 'java -version'
-                }
-            }
+        agent {
+            docker { image 'doc-jen'}
+        }
+        steps{
+            sh 'java -version'
+              }
+        }
         
         stage('Nginx'){
             agent {
