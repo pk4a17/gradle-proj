@@ -3,6 +3,11 @@ pipeline{
         docker { image 'doc-jen'}
     }
     stages{
+        stage('Java version'){
+            steps{
+                sh 'java -version'
+                }
+            }
         stage('Git'){
             steps{
                 git 'https://github.com/pk4a17/gradle-proj.git'
