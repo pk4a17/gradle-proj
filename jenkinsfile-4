@@ -17,6 +17,7 @@ pipeline{
             }
         stage('Sending Notification'){
             steps{
+                sh 'echo Sending build notification mail...'
                 mail bcc: '', body: 'Jenkins sample-pipeline build is successfull!', cc: '', from: '', replyTo: '', subject: 'Build successfull', to: 'purushottam.k@fnp.com'
             }
         }
