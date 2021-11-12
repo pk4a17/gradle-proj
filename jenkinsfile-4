@@ -5,7 +5,7 @@ pipeline{
     stages{
         stage('Git'){
             steps{
-                git 'clone 'https://github.com/pk4a17/gradle-proj.git' '  
+                git 'clone https://github.com/pk4a17/gradle-proj.git '  
                 }
             }
             
