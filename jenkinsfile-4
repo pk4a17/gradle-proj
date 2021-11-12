@@ -1,7 +1,5 @@
 pipeline{
-    agent {
-        docker { image 'doc-jen'}
-    }
+    agent any
     stages{
         stage('Git'){
             steps{
