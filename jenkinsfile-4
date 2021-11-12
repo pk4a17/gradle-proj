@@ -6,6 +6,8 @@ pipeline{
                 git credentialsId: 'git-cred', url: 'https://github.com/pk4a17/gradle-proj.git'
                 git 'clone https://github.com/pk4a17/gradle-proj.git'
             }
+           }
+           
         stage('Build'){
             steps{
                 echo 'Building test-pipeline....'
