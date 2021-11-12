@@ -3,6 +3,11 @@ pipeline{
         docker { image 'doc-jen'}
     }
     stages{
+        stage('Java version'){
+            steps{
+                sh 'java -version'
+                }
+            }
         stage('Message'){
             steps{
                 echo 'Hello, This is Jenkins pipeline.'
