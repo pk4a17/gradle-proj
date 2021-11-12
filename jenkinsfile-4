@@ -1,4 +1,4 @@
-ipeline{
+pipeline{
     agent {
         docker { image 'doc-jen'}
     }
@@ -20,5 +20,5 @@ ipeline{
                 mail bcc: '', body: 'Jenkins sample-pipeline build is successfull!', cc: '', from: '', replyTo: '', subject: 'Build successfull', to: 'purushottam.k@fnp.com'
             }
         }
-        
+      }
     }
