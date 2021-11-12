@@ -6,7 +6,7 @@ pipeline{
         stage('Git Clone'){
             steps{
                 
-                git 'clone origin https://github.com/pk4a17/gradle-proj.git'
+                git 'clone https://github.com/pk4a17/gradle-proj.git'
             }
            }
            
