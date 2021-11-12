@@ -1,11 +1,26 @@
 pipeline{
-    agent{
-      docker { image 'jenkins/jenkins:lts-jdk11'}
-    } 
+    agent {
+        docker { image 'doc-jen'}
+    }
     stages{
+        stage('Java version'){
+            steps{
+                sh 'java -version'
+                }
+            }
+        
+        stage('Nginx'){
+            agent {
+                docker { image 'nginx'}
+        }
+        steps{
+            sh 'nginx -v'
+        }
+        }
+        
         stage('Message'){
             steps{
-                echo 'Hello, This is Jenkins pipeline.'
+                echo 'Hello, This is Jenkins in Docker container.'
             }
         }
         
@@ -15,10 +30,17 @@ pipeline{
             }
         }
         
-        stage('Test'){
+        stage('Status'){
             steps{
-                echo 'Testing started'
+                echo 'Build successful.'
                 }
         }
+        
+        stage('Mail'){
+            steps{
+                mail bcc: '', body: 'Jenkins sample-pipeline build is successfull!', cc: '', from: '', replyTo: '', subject: 'Build successfull', to: 'purushottam.k@fnp.com'
+            }
+        }
+        
     }
 }
